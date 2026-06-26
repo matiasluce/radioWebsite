@@ -126,6 +126,7 @@ body {
     letter-spacing: 0.08em;
     padding-left: 0.25rem;
     font-weight: 600;
+    padding-top: 50px;
 }
 
 .banner-pub {
@@ -184,5 +185,9 @@ body {
     .contenedor-principal {
         grid-template-columns: 3fr 1fr; 
         gap: 2rem;
+    }
+
+    .titulo-publicidad{
+        padding-top: 20px;
     }
 }
