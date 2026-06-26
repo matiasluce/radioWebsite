@@ -39,7 +39,7 @@ body {
     /* max-width: 1200px; */
     width: 100%;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 0.8rem 1.5rem;
     flex: 1;
     display: grid;
     grid-template-columns: 1fr;
@@ -49,7 +49,7 @@ body {
 /* ---- SECCIÓN RADIO PRINCIPAL ---- */
 .seccion-radio {
     /* background: linear-gradient(to bottom, #161a2b, #070913); */
-    padding: 2.5rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 1.25rem;
     /* border: 1px solid #222943; */
     display: flex;
