@@ -177,7 +177,7 @@ body {
 }
 
 .wppBtn img{
-    width: 30px;
+    width: 2.5rem;
 }
 
 /* ---- RESPONSIVE DESIGN ---- */
@@ -189,5 +189,9 @@ body {
 
     .titulo-publicidad{
         padding-top: 20px;
+    }
+
+    .wppBtn img{
+        width: 2.4rem;
     }
 }
