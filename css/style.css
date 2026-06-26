@@ -214,4 +214,8 @@ body {
     .wppBtn img{
         width: 2.4rem;
     }
+
+    .titulo-radio{
+        padding-top: 2rem;
+    }
 }
