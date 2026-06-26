@@ -2,5 +2,4 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Estructura de la radio cargada correctamente.");
     
-    // Aquí puedes incluir eventos personalizados o analíticas cuando expandas la web
 });
