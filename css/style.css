@@ -87,6 +87,12 @@ body {
     line-height: 1.5;
 }
 
+.widgetTime{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
 /* ---- CONTENEDOR DEL REPRODUCTOR CASTER.FM ---- */
 .contenedor-reproductor {
     background-color: #ffffff; 
