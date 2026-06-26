@@ -125,7 +125,7 @@ body {
 
 .banner-pub {
     /* background-color: #161a2b; */
-    height: 270px;
+    height: auto;
     width: 270px;
     /* border-radius: 0.75rem;
     border: 1px solid #222943; */
