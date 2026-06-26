@@ -167,6 +167,16 @@ body {
 .footer a{
     color: #e81e4d;
     text-decoration: none;
+    transition: all ease 0.5s;
+}
+
+.footer a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.footer i{
+    padding: 0 0.25rem;
 }
 
 .wppBtn{
