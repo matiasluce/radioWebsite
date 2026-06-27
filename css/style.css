@@ -18,9 +18,19 @@ body {
     background-color: #070913;
     padding: 1.2rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid #1f2538;
+}
+
+.hora span,a{
+    font-size: 1.3rem;
+}
+
+.hora{
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
 }
 
 .logo-texto {
@@ -120,7 +130,7 @@ body {
 }
 
 .titulo-publicidad {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #8f9bba;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -130,16 +140,13 @@ body {
 }
 
 .banner-pub {
-    /* background-color: #161a2b; */
     height: auto;
     width: 270px;
-    /* border-radius: 0.75rem;
-    border: 1px solid #222943; */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease;
     overflow: hidden;
 }
 
@@ -148,9 +155,7 @@ body {
 }
 
 .banner-pub:hover {
-    transform: scale(1.02);
-    border-color: #e81e4d;
-    background-color: #1c2139;
+    transform: scale(1.05);
 }
 
 .texto-pub {
@@ -202,6 +207,9 @@ body {
 
 /* ---- RESPONSIVE DESIGN ---- */
 @media (min-width: 1024px) {
+    .header{
+        justify-content: space-between;
+    }
     .contenedor-principal {
         grid-template-columns: 3fr 1fr; 
         gap: 2rem;
@@ -217,5 +225,9 @@ body {
 
     .titulo-radio{
         padding-top: 2rem;
+    }
+
+    .hora{
+        display: block;
     }
 }
