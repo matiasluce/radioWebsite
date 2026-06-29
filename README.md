@@ -14,7 +14,3 @@ Una aplicación web de una sola página (Single Page Application) diseñada para
 - **HTML5:** Estructura y semántica de la página.
 - **CSS3:** Diseño, maquetación y sección de auspiciantes.
 - **JavaScript:** Funcionalidades del reproductor y la interactividad.
-
-## Licencia
-
-Este proyecto es de código abierto. ¡Sentite libre de usarlo, modificarlo y adaptarlo a tus necesidades!
