@@ -176,13 +176,14 @@ body {
 }
 
 .footer a{
-    color: #e81e4d;
+    color: white;
     text-decoration: none;
     transition: all ease 0.5s;
+    font-size: 1.05rem;
 }
 
 .footer a:hover{
-    color: white;
+    color: #e81e4d;
     text-decoration: underline;
 }
 
