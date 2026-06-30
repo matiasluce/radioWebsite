@@ -108,8 +108,10 @@ body {
     height: auto;
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
 }
+
+/*  BANNER PUBLI  */
 
 .bannerPubli img{
     max-width: 75%;
