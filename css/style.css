@@ -103,6 +103,18 @@ body {
     padding-top: 2.6rem;
 }
 
+.bannerPubli{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.bannerPubli img{
+    max-width: 75%;
+}
+
 /* ---- CONTENEDOR DEL REPRODUCTOR CASTER.FM ---- */
 .contenedor-reproductor {
     background-color: #ffffff; 
