@@ -3,40 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Máxima 89.9 FM - En Vivo 🔴</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Radio Máxima 89.9 FM - En Vivo desde Eduardo Castex, La Pampa</title>
+    <meta name="description" content="Escuchá Radio Máxima 89.9 FM en vivo desde Eduardo Castex, La Pampa. La mejor música, programación variada y compañía las 24 horas del día.">
+    <meta name="keywords" content="radio, maxima, 89.9 FM, Eduardo Castex, La Pampa, radio online, música, en vivo, streaming">
+    <meta name="author" content="Radio Máxima 89.9 FM">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f111a">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Radio Máxima 89.9 FM - En Vivo">
+    <meta property="og:description" content="Escuchá Radio Máxima 89.9 FM en vivo desde Eduardo Castex, La Pampa. La mejor música y programación las 24 hs.">
+    <meta property="og:image" content="https://radiomaxima.netlify.app/assets/logoFull.avif">
+    <meta property="og:url" content="https://radiomaxima.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Radio Máxima 89.9 FM">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Radio Máxima 89.9 FM - En Vivo">
+    <meta name="twitter:description" content="Escuchá Radio Máxima 89.9 FM en vivo desde Eduardo Castex, La Pampa.">
+    <meta name="twitter:image" content="https://radiomaxima.netlify.app/assets/logoFull.avif">
+
+    <link rel="canonical" href="https://radiomaxima.netlify.app">
     <link rel="shortcut icon" href="./assets/favicon.avif" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/c5dc02393b.js" crossorigin="anonymous"></script>
+
+    <!-- Preconnect para CDNs externos -->
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+    <link rel="preconnect" href="https://cdn.cloud.caster.fm">
+    <link rel="preconnect" href="https://api.meteored.com">
+    <link rel="dns-prefetch" href="//kit.fontawesome.com">
+    <link rel="dns-prefetch" href="//cdn.cloud.caster.fm">
+    <link rel="dns-prefetch" href="//api.meteored.com">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RadioStation",
+        "name": "Radio Máxima 89.9 FM",
+        "url": "https://radiomaxima.netlify.app/",
+        "description": "Radio FM en vivo desde Eduardo Castex, La Pampa. Música y programación las 24 horas.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Eduardo Castex",
+            "addressRegion": "La Pampa",
+            "addressCountry": "AR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -35.9127,
+            "longitude": -64.2967
+        },
+        "broadcastFrequency": {
+            "@type": "BroadcastFrequencySpecification",
+            "broadcastFrequencyValue": "89.9",
+            "broadcastSignalModulation": "FM"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Eduardo Castex"
+        },
+        "sameAs": [
+            "https://wa.me/+5492302654416"
+        ]
+    }
+    </script>
+
+    <script src="https://kit.fontawesome.com/c5dc02393b.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
         <h1 class="logo-texto">MÁXIMA <span class="resaltado">89.9 FM</span></h1>
-        <div class="hora">
-            <a href="https://time.is/Eduardo_Castex" id="time_is_link" rel="nofollow"></a>
-            <span id="Eduardo_Castex_z10c"></span>
-            <script src="//widget.time.is/es.js"></script>
-            <script>
-            time_is_widget.init({Eduardo_Castex_z10c:{template:"TIME<br>DATE", time_format:"hours:minutes", date_format:"dayname, monthname dnum"}});
-            </script>
-
-
-        </div>
     </header>
 
     <main class="contenedor-principal">
         
         <section class="seccion-radio">
             
-            <div class="hero-logo">
+            <div class="hero-logo fade-in">
+                <p class="badge-en-vivo"><span class="pulse-dot"></span> EN VIVO</p>
                 <h2 class="titulo-radio">Sintonizanos y Escuchanos</h2>
                 <p class="subtitulo-radio">Eduardo Castex - La Pampa | La mejor música y programación las 24 hs</p>
                 <div class="contenedor-logo-img">
-                    <img src="./assets/logoShort.avif" alt="Logo Radio Máxima" class="logo-radio-img">
+                    <img src="./assets/logoShort.avif" alt="Logo Radio Máxima 89.9 FM" class="logo-radio-img" width="320" height="180">
                 </div>
             </div>
 
-            <div class="contenedor-reproductor">
+            <div class="contenedor-reproductor fade-in">
                 <div data-type="newStreamPlayer" 
                      data-publicToken="986c28b2-47ee-4660-9cd3-6950906849d1" 
                      data-theme="light" 
@@ -48,15 +110,12 @@
                     <a href="https://www.caster.fm">Stream Hosting</a> 
                     <a href="https://www.caster.fm">Radio Server Hosting</a>
                 </div>
-                <script src="https://cdn.cloud.caster.fm//widgets/embed.js"></script>
                 
             </div>
 
-            <div class="bannerPubli">
-                <img src="./assets/bannerPubli.avif" alt="">
+            <div class="bannerPubli fade-in">
+                <img src="./assets/bannerPubli.avif" alt="Publicidad Radio Máxima 89.9 FM" loading="lazy">
             </div>
-
-            
 
         </section>
 
@@ -65,54 +124,59 @@
             <h3 class="titulo-publicidad">Nuestros Auspiciantes</h3>
             
             <div class="banner-pub">
-                <img src="./assets/castex.gif" alt="castex">
+                <img src="./assets/castex.gif" alt="Municipalidad de Eduardo Castex" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/curu.avif" alt="estudio juridico curuchet">
+                <img src="./assets/curu.avif" alt="Estudio Jurídico Curuchet - Abogados en Eduardo Castex" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/azafran.avif" alt="azafran rancul">
+                <img src="./assets/azafran.avif" alt="Azafrán Rancul - Restaurant y eventos" loading="lazy">
             </div>
             
             <div class="banner-pub">
-                <img src="./assets/p1.avif" alt="gomeria amigos">
+                <img src="./assets/p1.avif" alt="Gomería Amigos - Eduardo Castex" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/p2.avif" alt="pago facil">
+                <img src="./assets/p2.avif" alt="Pago Fácil - Eduardo Castex" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/p3.avif" alt="automotores guinda">
+                <img src="./assets/p3.avif" alt="Automotores Guinda - Concesionaria" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/p4.avif" alt="taxi rene">
+                <img src="./assets/p4.avif" alt="Taxi René - Eduardo Castex" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/p5.avif" alt="taller ale pintura">
+                <img src="./assets/p5.avif" alt="Taller Ale Pintura - Eduardo Castex" loading="lazy">
             </div>
 
             <div class="banner-pub">
-                <img src="./assets/p6.avif" alt="ale escapes">
+                <img src="./assets/p6.avif" alt="Ale Escapes - Eduardo Castex" loading="lazy">
             </div>
         </aside>
 
     </main>
 
     <footer class="footer">
-        <p><i class="fa-solid fa-radio"></i> Radio Máxima 89.9 FM | <i class="fa-solid fa-location-dot"></i> Eduardo Castex, La Pampa, Argentina | <i class="fa-solid fa-user-tie"></i> Desarrollo Web <a href="https://mlucero.com.ar/" target="_blank" rel="noopener noreferrer">Matías Lucero</a> </p>
+        <div class="footer-content">
+            <p><i class="fa-solid fa-radio"></i> Radio Máxima 89.9 FM</p>
+            <p><i class="fa-solid fa-location-dot"></i> Eduardo Castex, La Pampa, Argentina</p>
+            <p><i class="fa-solid fa-user-tie"></i> Desarrollo Web <a href="https://mlucero.com.ar/" target="_blank" rel="noopener noreferrer">Matías Lucero</a></p>
+        </div>
     </footer>
 
-    <div class="wppBtn">
-        <a href="https://wa.me/+5492302654416?text=hola" target="_blank" class="wpp">
-            <img src="./assets/wpp.avif" alt="">
+    <div class="wppBtn" aria-label="Contactar por WhatsApp">
+        <a href="https://wa.me/+5492302654416?text=Hola%20Radio%20Máxima" target="_blank" class="wpp" rel="noopener noreferrer">
+            <img src="./assets/wpp.avif" alt="Contactar por WhatsApp" width="40" height="40">
         </a>
     </div>
 
-    <script src="./js/script.js"></script>
+    <script src="https://cdn.cloud.caster.fm/widgets/embed.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </body>
 </html>

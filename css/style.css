@@ -4,59 +4,99 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #0f111a;
-    color: #f3f4f6; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f111a;
+    background-image: radial-gradient(ellipse at 50% 0%, #1a1d2e 0%, #0f111a 70%);
+    color: #f3f4f6;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f111a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a2f4a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e81e4d;
 }
 
 /* ---- HEADER ---- */
 .header {
-    background-color: #070913;
-    padding: 1.2rem 2rem;
+    background: rgba(7, 9, 19, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #1f2538;
+    border-bottom: 1px solid rgba(31, 37, 56, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: padding 0.3s ease;
 }
 
-.hora span,a{
-    font-size: 1.15rem;
-}
-
-.hora{
-    text-align: right;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: none;
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(232, 30, 77, 0.3), transparent);
 }
 
 .logo-texto {
-    font-size: 1.4rem;
-    letter-spacing: 0.05em;
-    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #c0c8e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .resaltado {
-    color: #e81e4d;
+    background: linear-gradient(135deg, #e81e4d, #e61c73);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ---- CONTENEDOR PRINCIPAL ---- */
 .contenedor-principal {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 1.5rem;
     flex: 1;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 /* ---- SECCIÓN RADIO PRINCIPAL ---- */
 .seccion-radio {
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 1rem;
     border-radius: 1.25rem;
     display: flex;
     flex-direction: column;
@@ -64,6 +104,45 @@ body {
 
 .hero-logo {
     text-align: center;
+    padding: 0.5rem 0;
+}
+
+.badge-en-vivo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(232, 30, 77, 0.12);
+    border: 1px solid rgba(232, 30, 77, 0.25);
+    color: #e81e4d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #e81e4d;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(232, 30, 77, 0.6);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+        box-shadow: 0 0 0 6px rgba(232, 30, 77, 0);
+    }
 }
 
 .contenedor-logo-img {
@@ -79,53 +158,77 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 8px 16px rgba(232, 30, 77, 0.15));
+    filter: drop-shadow(0 8px 24px rgba(232, 30, 77, 0.2));
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.logo-radio-img:hover {
+    filter: drop-shadow(0 12px 32px rgba(232, 30, 77, 0.35));
+    transform: scale(1.02);
 }
 
 .titulo-radio {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 900;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #c0c8e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
 }
 
 .subtitulo-radio {
-    color: #9ea7bc;
+    color: #8f9bba;
     font-size: 1rem;
     max-width: 600px;
-    margin:  auto;
-    line-height: 1.5;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
-.widgetTime{
+.widgetTime {
     display: flex;
     justify-content: center;
-    padding-top: 2.6rem;
-}
-
-.bannerPubli{
+    padding-top: 2rem;
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    padding-top: 2.5rem;
 }
 
-/*  BANNER PUBLI  */
+.bannerPubli {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
 
-.bannerPubli img{
-    max-width: 75%;
+.bannerPubli img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bannerPubli img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(232, 30, 77, 0.15);
 }
 
 /* ---- CONTENEDOR DEL REPRODUCTOR CASTER.FM ---- */
 .contenedor-reproductor {
-    background-color: #ffffff; 
-    border-radius: 0.75rem;
-    border: 1px solid #e5e7eb;
+    background: linear-gradient(145deg, #ffffff, #f0f2f8);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.contenedor-reproductor:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(232, 30, 77, 0.15), 0 0 0 1px rgba(232, 30, 77, 0.1);
 }
 
 .contenedor-reproductor .cstrEmbed, 
@@ -144,111 +247,270 @@ body {
 }
 
 .titulo-publicidad {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #8f9bba;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding-left: 0.25rem;
-    font-weight: 600;
-    padding-top: 50px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.titulo-publicidad::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, #e81e4d, #e61c73);
+    border-radius: 1px;
 }
 
 .banner-pub {
-    height: auto;
     width: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: all 0.3s ease;
     overflow: hidden;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(31, 37, 56, 0.4);
+    padding: 0.35rem;
 }
 
-.banner-pub img{
+.banner-pub img {
     width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    transition: transform 0.4s ease;
 }
 
 .banner-pub:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    border-color: rgba(232, 30, 77, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.texto-pub {
-    font-size: 0.85rem;
-    color: #8f9bba;
-    text-align: center;
-    line-height: 1.4;
+.banner-pub:hover img {
+    transform: scale(1.04);
 }
 
-
-/*  WIDGET TIME  */
-
-#mrwid1e500113986116fdf6166bde66f7725b{
-    padding-top: 1rem;
+/* WIDGET TIME */
+#mrwid1e500113986116fdf6166bde66f7725b {
+    padding-top: 0.5rem;
 }
+
 /* ---- FOOTER ---- */
 .footer {
-    background-color: #070913;
+    background: rgba(7, 9, 19, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 1.5rem;
     text-align: center;
-    font-size: 1rem;
+    border-top: 1px solid rgba(31, 37, 56, 0.4);
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.footer p {
     color: #525f7a;
-    border-top: 1px solid #1f2538;
+    font-size: 0.95rem;
 }
 
-.footer a{
-    color: white;
+.footer a {
+    color: #8f9bba;
     text-decoration: none;
-    transition: all ease 0.5s;
-    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
-.footer a:hover{
+.footer a:hover {
     color: #e81e4d;
-    text-decoration: underline;
 }
 
-.footer i{
-    padding: 0 0.25rem;
+.footer i {
+    padding: 0 0.3rem;
+    color: #e81e4d;
 }
 
-.wppBtn{
+/* ---- WHATSAPP BUTTON ---- */
+.wppBtn {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    animation: float 3s ease-in-out infinite;
 }
 
-.wppBtn img{
-    width: 2.5rem;
-    transition: all ease 0.3s;
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
-.wppBtn img:hover{
-    transform: scale(1.1);
+.wppBtn img {
+    width: 2.8rem;
+    height: 2.8rem;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(37, 211, 102, 0.3));
+}
+
+.wppBtn img:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 6px 20px rgba(37, 211, 102, 0.5));
+}
+
+/* ---- FADE-IN ANIMATION ---- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seleccion */
+::selection {
+    background: rgba(232, 30, 77, 0.3);
+    color: #ffffff;
 }
 
 /* ---- RESPONSIVE DESIGN ---- */
-@media (min-width: 1024px) {
-    .header{
-        justify-content: space-between;
+@media (min-width: 768px) {
+    .header {
+        padding: 1rem 3rem;
     }
+
     .contenedor-principal {
-        grid-template-columns: 3fr 1fr; 
-        gap: 2rem;
+        padding: 1.5rem 2.5rem;
     }
 
-    .titulo-publicidad{
-        padding-top: 20px;
+    .titulo-radio {
+        font-size: 2.4rem;
     }
 
-    .wppBtn img{
-        width: 2.4rem;
+    .seccion-radio {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 4rem;
+        justify-content: flex-start;
     }
 
-    .titulo-radio{
+    .contenedor-principal {
+        grid-template-columns: 3fr 1fr;
+        gap: 2.5rem;
+        padding: 2rem 4rem;
+    }
+
+    .titulo-publicidad {
+        padding-top: 1.25rem;
+    }
+
+    .wppBtn img {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .titulo-radio {
         padding-top: 0.25rem;
+        font-size: 2.6rem;
     }
 
-    .hora{
-        display: block;
+    .banner-pub {
+        width: 280px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .contenedor-principal {
+        grid-template-columns: 2.8fr 1fr;
+        gap: 3rem;
+    }
+
+    .banner-pub {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.8rem 1rem;
+    }
+
+    .logo-texto {
+        font-size: 1.2rem;
+    }
+
+    .contenedor-principal {
+        padding: 0.5rem 0.8rem;
+        gap: 1rem;
+    }
+
+    .titulo-radio {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo-radio {
+        font-size: 0.9rem;
+    }
+
+    .contenedor-reproductor {
+        max-width: 100%;
+        border-radius: 0.75rem;
+    }
+
+    .banner-pub {
+        width: 100%;
+        max-width: 270px;
+    }
+
+    .wppBtn {
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .wppBtn img {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .bannerPubli img {
+        max-width: 100%;
     }
 }
